@@ -1,0 +1,52 @@
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment (if not using Poetry's in-project venv)
+.env/
+venv/
+.venv/
+ENV/
+env/
+
+# Poetry
+poetry.lock
+.cache/
+.installed.cfg
+
+# VSCode settings
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+.cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Test output
+test-results/
+
+# Local env files
+.env
+.env.*

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "genlink-api"
+version = "0.1.0"
+description = ""
+authors = ["syedtazyeen <themesyed@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "genlink-api" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+fastapi = ">=0.115.12,<0.116.0"
+uvicorn = ">=0.34.2,<0.35.0"
+pydantic = ">=2.11.4,<3.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

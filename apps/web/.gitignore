@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+.temp/
+temp/
+.cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# React Router
+.react-router/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+
+# Package manager lock files (ignore all of them)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+bun.lock
