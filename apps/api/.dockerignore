@@ -1,0 +1,23 @@
+# virtual environments in the root directory
+venv/
+.venv/
+*.log
+*.env
+*.db
+*.sqlite3
+*.pyc
+*.pyo
+__pycache__/
+
+# Docker-related files
+Dockerfile
+.docke
+docker-compose.yml
+
+# version control directories
+.git/
+.gi
+
+# IDE/editor configuration files
+.vscode/
+.idea/

@@ -1,0 +1,26 @@
+# node_modules, bun, pnpm, and build artifacts in the web directory
+node_modules/
+.pnpm/
+bun/
+build/
+dist/
+public/
+
+# environment files
+*.env
+*.env.local
+*.env.development
+*.env.production
+
+# log files
+npm-debug.log
+yarn-error.log
+bun-error.log
+pnpm-debug.log
+
+# version control directories
+.git/
+
+# IDE/editor configuration files
+.vscode/
+.idea/
