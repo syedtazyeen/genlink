@@ -18,7 +18,7 @@ cd genlink
 Ensure Docker is installed, then start the development environment:
 
 ```bash
-./scripts/dev.sh
+docker-compose up --build
 ```
 
 > This will spin up both the frontend and backend services.
