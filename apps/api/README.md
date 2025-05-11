@@ -17,8 +17,8 @@ poetry install
 #### 3. Running FastAPI Locally
 
 ```bash
-poetry shell
+poetry run
 uvicorn app.main:app --reload
 ```
 
-> The API will be available at `http://localhost:8000`.
+> The API will be available at `http://localhost:8000` and API docs at `http://localhost:8000/docs`.

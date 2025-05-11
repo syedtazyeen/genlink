@@ -1,29 +1,19 @@
 # genlink
 
-**`genlink`** is the unified monorepo for the **genlink project**, built with **Python** and **TypeScript**. It hosts the fullstack system with a streamlined development workflow using **Docker**.
+**`genlink`** is the unified repo for the **genlink project** hosting a fullstack system, built with **Python** and **TypeScript**.
 
 [MIT License](./LICENSE)
 
-## Setup Instructions
-
-#### 1. Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/syedtazyeen/genlink.git
 cd genlink
 ```
 
-#### 2. Running in Development (with Docker)
+This contains the **backend service** `apps/api`, built using FastAPI with Poetry and **frontend** `apps/web` using Vite and React Router v7 framework.
 
-Ensure Docker is installed, then start the development environment:
-
-```bash
-docker-compose up --build
-```
-
-> This will spin up both the frontend and backend services.
-
-## Test User Credentials
+### Test User Credentials
 
 Use the following test user credentials to log in and test the platform:
 
