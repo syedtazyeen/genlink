@@ -23,7 +23,7 @@ class AuthService(BaseService):
         """Authenticate user with credentials."""
         user_data = await self.user_service.get_user_by_email(email)
 
-        if not user_data or not self.security.verify_password(password, user_data["password"]):
+        if not user_data or not user_data["provider"] == UserAuthProvider.CREDENTIALS or not self.security.verify_password(password, user_data["password"]):
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Incorrect email or password",
@@ -39,7 +39,7 @@ class AuthService(BaseService):
         """Register a new user with credentials."""
         if not await self.user_service.isEmailUnique(payload.email):
             raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
+                status_code=status.HTTP_409_CONFLICT,
                 detail="Email already registered",
                 headers={"WWW-Authenticate": "Bearer"},
             )

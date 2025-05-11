@@ -1,5 +1,6 @@
 """Authentication API"""
 import json
+from typing import Annotated
 from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi.encoders import jsonable_encoder
@@ -8,6 +9,7 @@ from app.services.auth import AuthService
 from app.models.user import UserResponse
 from app.models.auth import SignUpRequest, TokenResponse, PasswordResetRequest, VerifyResetCodeRequest, ChangePasswordRequest
 from app.core.config import get_config
+from app.routes.deps import get_current_user
 
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
@@ -37,6 +39,11 @@ async def verify_password_reset_code(payload: VerifyResetCodeRequest):
 async def reset_password_credentials(payload:ChangePasswordRequest):
     """Change password with reset code"""
     return await auth_service.change_password(payload.email, payload.reset_code, payload.new_password)
+
+@router.get("")
+async def read_current_user(current_user: Annotated[UserResponse, Depends(get_current_user)]):
+    """Get the current user"""
+    return current_user
 
 @router.get("/google")
 async def sign_in_google():
